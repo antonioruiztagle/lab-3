@@ -1,0 +1,18 @@
+<h1>Contact</h1>
+<%= form_with scope: :contact, url: contact_path, local: true do |form| %>
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= form.label :Email%>
+    <%= form.email_field :email %>
+  </div>
+  <div class="field">
+    <%= form.label :Message %>
+    <%= form.text_area :mensaje %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Send' %>
+  </div>
+<% end %>
